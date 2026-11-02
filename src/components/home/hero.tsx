@@ -62,6 +62,7 @@ export function Hero() {
           and Electronics Engineering, interested in research at the
           intersection of software engineering and machine learning.
         </p>
+        <p className="home-hero-ece">My electrical engineering work spans electric vehicles, motor and controller systems, and EV charging infrastructure.</p>
         <div className="home-hero-actions">
           {heroLinks.map((link) => (
             <Link

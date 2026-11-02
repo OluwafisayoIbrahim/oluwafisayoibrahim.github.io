@@ -21,6 +21,16 @@ export interface ResearchTrack {
   results: readonly ResearchResult[];
 }
 
+export interface ResearchComparison {
+  sectionId: string;
+  sourceHref: string;
+  groups: readonly {
+    title: string;
+    description: string;
+    rows: readonly { model: string; mae: string; mape: string; r2: string }[];
+  }[];
+}
+
 export interface ResearchProject {
   slug: string;
   title: string;
@@ -29,6 +39,7 @@ export interface ResearchProject {
   tools: readonly string[];
   featured?: boolean;
   figure?: ImageAsset;
+  comparison?: ResearchComparison;
   sections: readonly ContentSection[];
   results: readonly ResearchResult[];
   tracks: readonly ResearchTrack[];

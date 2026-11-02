@@ -1791,3 +1791,17 @@
   #top .site-nav-links { position: absolute; top: calc(100% + .65rem); left: 0; right: 0; z-index: 3; padding: .75rem 1.5rem; border: 1px solid var(--divider); border-radius: .5rem; background: var(--canvas); box-shadow: 0 16px 48px rgb(23 35 56 / .16); max-height: calc(100svh - 6.5rem); overflow-y: auto; }
   #top .site-nav-links .nav-link { min-height: 52px; font-size: 1rem; }
 }
+
+.home-hero-ece { max-width: 38rem; color: var(--slate); font-size: .9375rem; line-height: 1.75; margin: 1rem 0 0; }
+.research-comparison { min-width: 0; margin-block: 1.5rem; }
+.research-comparison-group { min-width: 0; margin-block: 2rem; }
+.research-comparison h3 { font-family: var(--font-newsreader), Georgia, serif; font-weight: 400; font-size: 1.5rem; line-height: 1.3; color: var(--ink); }
+.research-table-scroll { max-width: 100%; overflow-x: auto; margin-block: 1rem; border: 1px solid var(--divider); }
+.research-table-scroll:focus-visible { outline: 2px solid var(--editorial-blue); outline-offset: 3px; }
+.research-table-scroll table { border-collapse: collapse; width: 100%; min-width: 38rem; text-align: left; font-size: .8125rem; }
+.research-table-scroll caption { text-align: left; padding: .875rem 1rem; color: var(--slate); }
+.research-table-scroll th, .research-table-scroll td { padding: .875rem; border-top: 1px solid var(--divider); }
+.research-table-scroll thead { background: var(--surface); color: var(--ink); }
+.research-table-scroll tbody th { font-weight: 500; }
+.research-table-scroll td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.research-detail-section > div { min-width: 0; }

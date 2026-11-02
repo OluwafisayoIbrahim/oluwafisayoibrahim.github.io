@@ -27,7 +27,7 @@ export function Education() {
             <h3 className="editorial-heading engineering-title">
               B.Eng. Electrical and Electronics Engineering
             </h3>
-            <p className="research-summary">CGPA: 4.19 / 5.00</p>
+            <p className="research-summary">CGPA: 4.19/5.00, Second Class Upper Division</p>
           </div>
         </div>
         <EducationalProjects />
