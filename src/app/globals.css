@@ -1805,3 +1805,23 @@
 .research-table-scroll tbody th { font-weight: 500; }
 .research-table-scroll td { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .research-detail-section > div { min-width: 0; }
+
+.caution-project-narrative { max-width: 54rem; margin-block: 3rem; }
+.caution-project-narrative section { border-top: 1px solid var(--divider); padding-block: 2rem; }
+.caution-project-narrative h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.2; margin: 0 0 1.25rem; }
+.caution-project-narrative p { color: var(--slate); font-size: 1rem; line-height: 1.85; margin: 0 0 1rem; }
+.publication-with-metrics { display: grid; grid-template-columns: minmax(0, 2fr) minmax(12rem, 1fr); gap: 2.5rem; align-items: center; border-top: 1px solid var(--divider); }
+.publication-with-metrics > .publication-row { border-top: 0; min-width: 0; }
+.publication-metrics { min-width: 0; padding-block: 1.5rem; }
+.publication-metrics > .editorial-label { color: var(--slate); margin-bottom: .75rem; }
+.publication-plumprint { max-width: 100%; margin-block: .75rem; }
+.publication-metrics-note { font-size: .8125rem; color: var(--slate); line-height: 1.6; }
+.publication-metrics > a { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; font-size: .875rem; }
+@media (max-width: 700px) {
+ .publication-with-metrics { grid-template-columns: minmax(0, 1fr); gap: 0; }
+ .publication-metrics { padding-top: 0; padding-bottom: 2rem; }
+}
+
+@media (max-width: 700px) {
+  .publication-plumprint { display: flex; justify-content: center; }
+}

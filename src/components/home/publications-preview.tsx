@@ -1,3 +1,4 @@
+import { PlumxMetrics } from "@/components/research/plumx-metrics";
 import type { Publication } from "@/types/publication";
 import { PublicationItem } from "@/components/research/publication-item";
 export function PublicationsPreview({
@@ -19,7 +20,10 @@ export function PublicationsPreview({
         </h2>
         <div className="research-list">
           {publications.map((publication) => (
-            <PublicationItem key={publication.id} publication={publication} />
+            <div className="publication-with-metrics" key={publication.id}>
+              <PublicationItem publication={publication} />
+              {publication.doi && <PlumxMetrics doi={publication.doi} />}
+            </div>
           ))}
         </div>
       </div>

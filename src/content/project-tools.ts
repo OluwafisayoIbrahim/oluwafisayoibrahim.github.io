@@ -1,4 +1,4 @@
-export const cautionTools = ["Arduino Uno", "C / C++", "Proteus"] as const;
+export const cautionTools = ["Arduino Uno", "C / C++"] as const;
 export const softwareTools = [
   "Next.js",
   "React",
