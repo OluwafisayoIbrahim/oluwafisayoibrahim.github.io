@@ -11,7 +11,7 @@ export async function getCountryCities(
 ): Promise<WorldCity[]> {
   if (cache.has(code)) return cache.get(code)!;
   const response = await fetch(`/world/${encodeURIComponent(code)}.json`, {
-    signal,
+    signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(10000)]) : AbortSignal.timeout(10000),
   });
   if (!response.ok) throw new Error("Cities could not be loaded.");
   const cities: WorldCity[] = await response.json();

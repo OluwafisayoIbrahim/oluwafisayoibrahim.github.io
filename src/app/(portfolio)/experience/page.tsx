@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { professionalRoles } from "@/content/experience";
 
 export const metadata: Metadata = {
+  openGraph: {"title": "Professional Experience", "description": "Professional experience in software engineering, electric vehicles, and industrial electrical systems.", "url": "/experience/", "type": "website"},
+  alternates: { canonical: "/experience/" },
+  keywords: ["Software engineering", "Electric vehicles", "Electrical engineering", "Xanadu", "Metropolitan Electric"],
   title: "Professional Experience",
   description:
     "Professional experience in software engineering, electric vehicles, and industrial electrical systems.",

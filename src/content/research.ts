@@ -80,7 +80,91 @@ export const researchProjects: readonly ResearchProject[] = [
   },
   {
     slug: "solar-python-reevaluation",
-    figure: { src: "/images/research/solar-python-results.png", alt: "Measured versus predicted solar power for the tuned weather-only ANN", caption: "Track B · measured versus predicted power using weather inputs." },
+    comparison: {
+  "sectionId": "python-results",
+  "sourceHref": "https://github.com/OluwafisayoIbrahim/solar-power-prediction-python/blob/dev/results/comparisons/parity_s2/comparison.md",
+  "groups": [
+    {
+      "title": "Electrical inputs included (Track A)",
+      "description": "Irradiance, temperature, humidity, current and voltage. The current × voltage baseline requires no learned model.",
+      "rows": [
+        {
+          "model": "Linear regression",
+          "mae": "0.992 ± 0.000",
+          "mape": "0.382 ± 0.000",
+          "r2": "0.998 ± 0.000"
+        },
+        {
+          "model": "Current × voltage baseline",
+          "mae": "1.168 ± 0.000",
+          "mape": "0.445 ± 0.000",
+          "r2": "0.998 ± 0.000"
+        },
+        {
+          "model": "ANN · PyTorch",
+          "mae": "1.575 ± 0.071",
+          "mape": "0.606 ± 0.025",
+          "r2": "0.994 ± 0.000"
+        },
+        {
+          "model": "ANN · scikit-learn (tuned)",
+          "mae": "1.141 ± 0.112",
+          "mape": "0.442 ± 0.044",
+          "r2": "0.997 ± 0.001"
+        },
+        {
+          "model": "ANN · scikit-learn (untuned)",
+          "mae": "1.319 ± 0.143",
+          "mape": "0.518 ± 0.063",
+          "r2": "0.978 ± 0.018"
+        },
+        {
+          "model": "ANN · TensorFlow",
+          "mae": "1.545 ± 0.162",
+          "mape": "0.594 ± 0.062",
+          "r2": "0.994 ± 0.001"
+        }
+      ]
+    },
+    {
+      "title": "Weather inputs only (Track B)",
+      "description": "Irradiance, temperature, humidity and hour of day; current and voltage are excluded. These are contemporaneous power estimates, not future-time forecasts.",
+      "rows": [
+        {
+          "model": "Linear regression",
+          "mae": "12.165 ± 0.000",
+          "mape": "4.854 ± 0.000",
+          "r2": "0.701 ± 0.000"
+        },
+        {
+          "model": "ANN · PyTorch",
+          "mae": "11.981 ± 0.132",
+          "mape": "4.809 ± 0.040",
+          "r2": "0.694 ± 0.007"
+        },
+        {
+          "model": "ANN · scikit-learn (tuned)",
+          "mae": "11.965 ± 0.172",
+          "mape": "4.786 ± 0.072",
+          "r2": "0.703 ± 0.011"
+        },
+        {
+          "model": "ANN · scikit-learn (untuned)",
+          "mae": "14.302 ± 0.773",
+          "mape": "5.698 ± 0.239",
+          "r2": "0.191 ± 0.463"
+        },
+        {
+          "model": "ANN · TensorFlow",
+          "mae": "12.131 ± 0.379",
+          "mape": "4.854 ± 0.122",
+          "r2": "0.695 ± 0.008"
+        }
+      ]
+    }
+  ]
+},
+    figure: { src: "/images/research/solar-python-results.png", alt: "Measured versus predicted solar power for the tuned weather-only ANN", caption: "Weather inputs only (Track B) · measured versus predicted solar power." },
     title: "Solar Power Prediction: Python Reimplementation",
     summary:
       "A Python reimplementation of my undergraduate research project on solar power prediction, extending the neural-network experiments across scikit-learn, TensorFlow and PyTorch, with an interactive Streamlit app.",
@@ -123,8 +207,9 @@ export const researchProjects: readonly ResearchProject[] = [
         id: "python-results",
         title: "What the experiments show",
         paragraphs: [
+          "With weather inputs alone, the tuned ANN performed similarly to linear regression; these experiments do not establish a clear advantage for the neural network on this small dataset.",
           "For the weather-only task, the tuned scikit-learn ANN recorded a mean MAE of 11.965 W, RMSE of 15.089 W, MAPE of 4.786% and R² of 0.703 across the three seeds. Linear regression recorded MAE of 12.165 W and R² of 0.701, so the tuned network's advantage over that simple baseline was modest.",
-          "In the matched S2 framework comparison, weather-only MAE was 12.131 W for TensorFlow and 11.981 W for PyTorch. These results describe this dataset and protocol, rather than establishing a general framework ranking. The repository retains historical runs separately, including training-budget and convergence notes, so results can be traced to their exact experiment.",
+          "S2 is the repository label for the matched TensorFlow/PyTorch framework comparison, not a separate dataset. In that comparison, weather-only MAE was 12.131 W for TensorFlow and 11.981 W for PyTorch. These results describe this dataset and protocol, rather than establishing a general framework ranking. The repository retains historical runs separately, including training-budget and convergence notes, so results can be traced to their exact experiment.",
         ],
       },
       {
@@ -178,9 +263,9 @@ export const researchProjects: readonly ResearchProject[] = [
         id: "bug-method",
         title: "From report text to ranked candidates",
         paragraphs: [
-          "The work includes data preparation for Eclipse Platform reports and the IssuesDupes dataset. Report text and duplicate relationships are prepared for retrieval experiments, with exploratory notebooks used to inspect the data before comparing approaches.",
+          "The work includes data preparation for Eclipse Platform reports and the IssueDupesLite dataset. Report text and duplicate relationships are prepared for retrieval experiments, with exploratory notebooks used to inspect the data before comparing approaches.",
           "A TF-IDF baseline represents reports through weighted terms, giving more emphasis to distinctive words than to common ones. Cosine similarity ranks candidate reports by the similarity of these representations.",
-          "Sentence-BERT experiments represent report text as dense vectors, making it possible to compare reports whose meanings are similar even when their wording differs. The repository also contains training-data preparation and fine-tuning notebooks for investigating how task-specific examples affect retrieval.",
+          "The current Sentence-BERT baseline uses sentence-transformers/all-MiniLM-L6-v2. These experiments represent report text as dense vectors, making it possible to compare reports whose meanings are similar even when their wording differs. The repository also contains training-data preparation and fine-tuning notebooks for investigating how task-specific examples affect retrieval.",
         ],
       },
       {

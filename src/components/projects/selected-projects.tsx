@@ -15,7 +15,7 @@ export function SelectedProjects() {
       className="selected-experience-projects"
       aria-labelledby="selected-projects-title"
     >
-      <p className="editorial-label home-kicker">Selected projects</p>
+      <p className="editorial-label home-kicker">Software products</p>
       <h2
         id="selected-projects-title"
         className="editorial-heading home-section-title"

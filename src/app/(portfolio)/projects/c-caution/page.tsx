@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CCautionPreview } from "@/components/home/c-caution-preview";
 export const metadata: Metadata = {
+  openGraph: {"title": "C-Caution Safety Sign", "description": "An undergraduate embedded-systems project and interactive LED sequence preview.", "url": "/projects/c-caution/", "type": "website"},
+  alternates: { canonical: "/projects/c-caution/" },
+  keywords: ["C-Caution", "Arduino Uno", "ATmega328P", "NE555", "CD4017", "Embedded systems"],
   title: "C-Caution Safety Sign",
   description:
     "An undergraduate embedded-systems project and interactive LED sequence preview.",

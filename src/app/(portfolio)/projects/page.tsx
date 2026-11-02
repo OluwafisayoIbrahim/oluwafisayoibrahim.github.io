@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { ProjectsPage } from "@/features/projects/projects-page";
 export const metadata: Metadata = {
+  openGraph: {"title": "Projects", "description": "Selected embedded-systems, web, and mobile projects by Oluwafisayo Ibrahim.", "url": "/projects/", "type": "website"},
+  alternates: { canonical: "/projects/" },
+  keywords: ["Embedded systems", "Arduino", "Software projects"],
   title: "Projects",
   description:
     "Selected embedded-systems, web, and mobile projects by Oluwafisayo Ibrahim.",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ResearchResultsTable } from "@/components/research/research-results-table";
 import { ResearchFigure } from "@/components/research/research-figure";
 import { ProjectTools } from "@/components/projects/project-tools";
 import type { Publication } from "@/types/publication";
@@ -43,6 +44,7 @@ export function ResearchDetailsPage({
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              {research.comparison?.sectionId === section.id && <ResearchResultsTable comparison={research.comparison} />}
             </div>
           </section>
         ))}
