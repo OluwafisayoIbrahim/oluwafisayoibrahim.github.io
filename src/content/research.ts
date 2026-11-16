@@ -176,7 +176,7 @@ export const researchProjects: readonly ResearchProject[] = [
     }
   ]
 },
-    figure: {"src": "/images/research/solar-python-results.svg", "alt": "Manuscript Figure 5: horizontal mean MAE bars with one population seed standard deviation for six Track A models and five Track B models, on independent zero-based scales in watts", "caption": "Manuscript Figure 5 · matched S2 mean MAE (W) ± one population seed standard deviation. Track panels use independent scales; bars start at zero. Lower is better. 180 observations across 20 days; seed variation is not a confidence interval.", "aspectRatio": "436 / 498"},
+    figure: {"src": "/images/research/solar-python-results.svg", "alt": "Manuscript Figure 4: measured versus predicted solar power in watts for the four Track B models shown in the manuscript, seed 0; the dashed diagonal marks perfect agreement", "caption": "Weather inputs only (Track B): measured versus predicted power, seed 0. All 180 held-out observations per model; dashed line denotes equality.", "aspectRatio": "485 / 381"},
     title: "Solar Power Prediction: Python Reimplementation",
     summary:
       "A Python reimplementation of my undergraduate research project on solar power prediction, extending the neural-network experiments across scikit-learn, TensorFlow and PyTorch, with an interactive Streamlit app.",
