@@ -83,7 +83,6 @@ export const researchProjects: readonly ResearchProject[] = [
     comparison: {
   "sectionId": "python-results",
   "csvHref": "https://github.com/OluwafisayoIbrahim/solar-power-prediction-python/blob/cfc51840ac5bce1454d9b924c6eec65935deb877/results/comparison/comparison.csv",
-  "sourceHref": "https://github.com/OluwafisayoIbrahim/solar-power-prediction-python/blob/dev/results/comparisons/parity_s2/comparison.md",
   "groups": [
     {
       "title": "Electrical inputs included (Track A)",
@@ -194,7 +193,7 @@ export const researchProjects: readonly ResearchProject[] = [
         id: "python-data",
         title: "Rebuilding the research in Python",
         paragraphs: [
-          "The Python implementation uses the original field measurements collected at Olabisi Onabanjo University: 189 readings across 21 days. The work brings data preparation, model training, validation and prediction into reusable modules, with saved results that can be explored through the live demo.",
+          "The Python implementation uses the original field measurements collected at Olabisi Onabanjo University: 180 readings across 20 days. The work brings data preparation, model training, validation and prediction into reusable modules, with saved results that can be explored through the live demo.",
           "The experiments use two sets of inputs. One combines irradiance, temperature and humidity with current and voltage; the other uses irradiance, temperature, humidity and hour of day. Keeping these experiments separate shows how the available measurements affect power estimates. The weather-based models estimate output from measured conditions, rather than predicting future weather.",
         ],
       },
@@ -210,7 +209,7 @@ export const researchProjects: readonly ResearchProject[] = [
         id: "python-validation",
         title: "Testing on unseen measurement days",
         paragraphs: [
-          "The outer validation uses seven grouped folds, holding out three whole days at a time. Keeping each day together prevents neighbouring readings from that day appearing in both the training and test sets. Model selection uses three inner grouped folds drawn only from the outer training days.",
+          "The outer validation uses seven grouped folds: six hold out three whole days each, and one holds out two whole days. Keeping each day together prevents neighbouring readings from that day appearing in both the training and test sets. Model selection uses three inner grouped folds drawn only from the outer training days.",
           "Experiments use seeds 0, 1 and 2 to examine sensitivity to initialisation. Each observation receives an out-of-fold prediction while its day is held out. MAE, RMSE, MAPE and R² are calculated from these pooled predictions for each seed, rather than averaging unstable R² values from small test folds.",
           "The experiment records prediction errors, model comparisons and daily output profiles. Electrical-input accuracy must be interpreted alongside the current × voltage baseline. Weather-only results address a harder task, and the limited number of days does not establish performance across climates or seasons.",
         ],
@@ -220,8 +219,8 @@ export const researchProjects: readonly ResearchProject[] = [
         title: "What the experiments show",
         paragraphs: [
           "With weather inputs alone, the tuned ANN performed similarly to linear regression; these experiments do not establish a clear advantage for the neural network on this small dataset.",
-          "For the weather-only task, the tuned scikit-learn ANN recorded a mean MAE of 11.965 W, RMSE of 15.089 W, MAPE of 4.786% and R² of 0.703 across the three seeds. Linear regression recorded MAE of 12.165 W and R² of 0.701, so the tuned network's advantage over that simple baseline was modest.",
-          "S2 is the repository label for the matched TensorFlow/PyTorch framework comparison, not a separate dataset. In that comparison, weather-only MAE was 12.131 W for TensorFlow and 11.981 W for PyTorch. These results describe this dataset and protocol, rather than establishing a general framework ranking. The repository retains historical runs separately, including training-budget and convergence notes, so results can be traced to their exact experiment.",
+          "For the weather-only task, the tuned scikit-learn ANN recorded a mean MAE of 12.179 W, RMSE of 15.633 W, MAPE of 4.865% and R² of 0.673 across the three seeds. Linear regression recorded MAE of 11.835 W and R² of 0.702, outperforming the tuned network on all four mean metrics. These differences are descriptive and do not establish statistical significance.",
+          "S2 is the repository label for the matched TensorFlow/PyTorch framework comparison, not a separate dataset. In that comparison, weather-only MAE was 11.951 W for TensorFlow and 12.032 W for PyTorch. These results describe this dataset and protocol, rather than establishing a general framework ranking. Earlier repository commits retain historical runs, including training-budget and convergence notes, so results can be traced to their exact experiment.",
         ],
       },
       {

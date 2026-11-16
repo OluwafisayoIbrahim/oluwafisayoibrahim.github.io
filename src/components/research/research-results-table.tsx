@@ -14,6 +14,5 @@ export function ResearchResultsTable({ comparison }: { comparison: ResearchCompa
         </table>
       </div>
     </div>)}
-    <p><a className="editorial-link" href={comparison.sourceHref}>Source: saved comparison and experiment notes ↗</a></p>
   </div>;
 }
