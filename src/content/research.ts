@@ -82,7 +82,7 @@ export const researchProjects: readonly ResearchProject[] = [
     slug: "solar-python-reevaluation",
     comparison: {
   "sectionId": "python-results",
-  "sourceHref": "https://github.com/OluwafisayoIbrahim/solar-power-prediction-python/blob/dev/results/comparisons/parity_s2/comparison.md",
+  "csvHref": "https://github.com/OluwafisayoIbrahim/solar-power-prediction-python/blob/cfc51840ac5bce1454d9b924c6eec65935deb877/results/comparison/comparison.csv",
   "groups": [
     {
       "title": "Electrical inputs included (Track A)",
@@ -90,39 +90,45 @@ export const researchProjects: readonly ResearchProject[] = [
       "rows": [
         {
           "model": "Linear regression",
-          "mae": "0.992 ± 0.000",
-          "mape": "0.382 ± 0.000",
-          "r2": "0.998 ± 0.000"
+          "rmse": "1.235 ± 0.000",
+          "mae": "0.978 ± 0.000",
+          "r2": "0.998 ± 0.000",
+          "mape": "0.377 ± 0.000"
         },
         {
-          "model": "Current × voltage baseline",
-          "mae": "1.168 ± 0.000",
-          "mape": "0.445 ± 0.000",
-          "r2": "0.998 ± 0.000"
+          "model": "Electrical-product baseline, P = I × V",
+          "rmse": "1.254 ± 0.000",
+          "mae": "1.115 ± 0.000",
+          "r2": "0.998 ± 0.000",
+          "mape": "0.424 ± 0.000"
         },
         {
-          "model": "ANN · PyTorch",
-          "mae": "1.575 ± 0.071",
-          "mape": "0.606 ± 0.025",
-          "r2": "0.994 ± 0.000"
+          "model": "Untuned scikit-learn ANN",
+          "rmse": "3.580 ± 3.118",
+          "mae": "1.304 ± 0.538",
+          "r2": "0.970 ± 0.039",
+          "mape": "0.505 ± 0.214"
         },
         {
-          "model": "ANN · scikit-learn (tuned)",
-          "mae": "1.141 ± 0.112",
-          "mape": "0.442 ± 0.044",
-          "r2": "0.997 ± 0.001"
+          "model": "Tuned scikit-learn ANN",
+          "rmse": "1.393 ± 0.089",
+          "mae": "1.069 ± 0.060",
+          "r2": "0.997 ± 0.000",
+          "mape": "0.413 ± 0.026"
         },
         {
-          "model": "ANN · scikit-learn (untuned)",
-          "mae": "1.319 ± 0.143",
-          "mape": "0.518 ± 0.063",
-          "r2": "0.978 ± 0.018"
+          "model": "TensorFlow/Keras selected ANN",
+          "rmse": "1.863 ± 0.297",
+          "mae": "1.334 ± 0.159",
+          "r2": "0.995 ± 0.002",
+          "mape": "0.515 ± 0.059"
         },
         {
-          "model": "ANN · TensorFlow",
-          "mae": "1.545 ± 0.162",
-          "mape": "0.594 ± 0.062",
-          "r2": "0.994 ± 0.001"
+          "model": "PyTorch selected ANN",
+          "rmse": "2.405 ± 0.145",
+          "mae": "1.624 ± 0.148",
+          "r2": "0.992 ± 0.001",
+          "mape": "0.622 ± 0.062"
         }
       ]
     },
@@ -132,39 +138,44 @@ export const researchProjects: readonly ResearchProject[] = [
       "rows": [
         {
           "model": "Linear regression",
-          "mae": "12.165 ± 0.000",
-          "mape": "4.854 ± 0.000",
-          "r2": "0.701 ± 0.000"
+          "rmse": "14.928 ± 0.000",
+          "mae": "11.835 ± 0.000",
+          "r2": "0.702 ± 0.000",
+          "mape": "4.724 ± 0.000"
         },
         {
-          "model": "ANN · PyTorch",
-          "mae": "11.981 ± 0.132",
-          "mape": "4.809 ± 0.040",
-          "r2": "0.694 ± 0.007"
+          "model": "Untuned scikit-learn ANN",
+          "rmse": "18.890 ± 1.219",
+          "mae": "14.044 ± 0.267",
+          "r2": "0.521 ± 0.063",
+          "mape": "5.584 ± 0.136"
         },
         {
-          "model": "ANN · scikit-learn (tuned)",
-          "mae": "11.965 ± 0.172",
-          "mape": "4.786 ± 0.072",
-          "r2": "0.703 ± 0.011"
+          "model": "Tuned scikit-learn ANN",
+          "rmse": "15.633 ± 0.278",
+          "mae": "12.179 ± 0.037",
+          "r2": "0.673 ± 0.012",
+          "mape": "4.865 ± 0.012"
         },
         {
-          "model": "ANN · scikit-learn (untuned)",
-          "mae": "14.302 ± 0.773",
-          "mape": "5.698 ± 0.239",
-          "r2": "0.191 ± 0.463"
+          "model": "TensorFlow/Keras selected ANN",
+          "rmse": "14.989 ± 0.372",
+          "mae": "11.951 ± 0.317",
+          "r2": "0.700 ± 0.015",
+          "mape": "4.761 ± 0.107"
         },
         {
-          "model": "ANN · TensorFlow",
-          "mae": "12.131 ± 0.379",
-          "mape": "4.854 ± 0.122",
-          "r2": "0.695 ± 0.008"
+          "model": "PyTorch selected ANN",
+          "rmse": "15.027 ± 0.246",
+          "mae": "12.032 ± 0.262",
+          "r2": "0.698 ± 0.010",
+          "mape": "4.806 ± 0.097"
         }
       ]
     }
   ]
 },
-    figure: { src: "/images/research/solar-python-results.png", alt: "Measured versus predicted solar power for the tuned weather-only ANN", caption: "Weather inputs only (Track B) · measured versus predicted solar power." },
+    figure: {"src": "/images/research/solar-python-results.svg", "alt": "Manuscript Figure 4: measured versus predicted solar power in watts for the four Track B models shown in the manuscript, seed 0; the dashed diagonal marks perfect agreement", "caption": "Weather inputs only (Track B): measured versus predicted power, seed 0. All 180 held-out observations per model; dashed line denotes equality.", "aspectRatio": "485 / 381"},
     title: "Solar Power Prediction: Python Reimplementation",
     summary:
       "A Python reimplementation of my undergraduate research project on solar power prediction, extending the neural-network experiments across scikit-learn, TensorFlow and PyTorch, with an interactive Streamlit app.",
@@ -182,7 +193,7 @@ export const researchProjects: readonly ResearchProject[] = [
         id: "python-data",
         title: "Rebuilding the research in Python",
         paragraphs: [
-          "The Python implementation uses the original field measurements collected at Olabisi Onabanjo University: 189 readings across 21 days. The work brings data preparation, model training, validation and prediction into reusable modules, with saved results that can be explored through the live demo.",
+          "The Python implementation uses the original field measurements collected at Olabisi Onabanjo University: 180 readings across 20 days. The work brings data preparation, model training, validation and prediction into reusable modules, with saved results that can be explored through the live demo.",
           "The experiments use two sets of inputs. One combines irradiance, temperature and humidity with current and voltage; the other uses irradiance, temperature, humidity and hour of day. Keeping these experiments separate shows how the available measurements affect power estimates. The weather-based models estimate output from measured conditions, rather than predicting future weather.",
         ],
       },
@@ -198,7 +209,7 @@ export const researchProjects: readonly ResearchProject[] = [
         id: "python-validation",
         title: "Testing on unseen measurement days",
         paragraphs: [
-          "The outer validation uses seven grouped folds, holding out three whole days at a time. Keeping each day together prevents neighbouring readings from that day appearing in both the training and test sets. Model selection uses three inner grouped folds drawn only from the outer training days.",
+          "The outer validation uses seven grouped folds: six hold out three whole days each, and one holds out two whole days. Keeping each day together prevents neighbouring readings from that day appearing in both the training and test sets. Model selection uses three inner grouped folds drawn only from the outer training days.",
           "Experiments use seeds 0, 1 and 2 to examine sensitivity to initialisation. Each observation receives an out-of-fold prediction while its day is held out. MAE, RMSE, MAPE and R² are calculated from these pooled predictions for each seed, rather than averaging unstable R² values from small test folds.",
           "The experiment records prediction errors, model comparisons and daily output profiles. Electrical-input accuracy must be interpreted alongside the current × voltage baseline. Weather-only results address a harder task, and the limited number of days does not establish performance across climates or seasons.",
         ],
@@ -208,8 +219,8 @@ export const researchProjects: readonly ResearchProject[] = [
         title: "What the experiments show",
         paragraphs: [
           "With weather inputs alone, the tuned ANN performed similarly to linear regression; these experiments do not establish a clear advantage for the neural network on this small dataset.",
-          "For the weather-only task, the tuned scikit-learn ANN recorded a mean MAE of 11.965 W, RMSE of 15.089 W, MAPE of 4.786% and R² of 0.703 across the three seeds. Linear regression recorded MAE of 12.165 W and R² of 0.701, so the tuned network's advantage over that simple baseline was modest.",
-          "S2 is the repository label for the matched TensorFlow/PyTorch framework comparison, not a separate dataset. In that comparison, weather-only MAE was 12.131 W for TensorFlow and 11.981 W for PyTorch. These results describe this dataset and protocol, rather than establishing a general framework ranking. The repository retains historical runs separately, including training-budget and convergence notes, so results can be traced to their exact experiment.",
+          "For the weather-only task, the tuned scikit-learn ANN recorded a mean MAE of 12.179 W, RMSE of 15.633 W, MAPE of 4.865% and R² of 0.673 across the three seeds. Linear regression recorded MAE of 11.835 W and R² of 0.702, outperforming the tuned network on all four mean metrics. These differences are descriptive and do not establish statistical significance.",
+          "S2 is the repository label for the matched TensorFlow/PyTorch framework comparison, not a separate dataset. In that comparison, weather-only MAE was 11.951 W for TensorFlow and 12.032 W for PyTorch. These results describe this dataset and protocol, rather than establishing a general framework ranking. Earlier repository commits retain historical runs, including training-budget and convergence notes, so results can be traced to their exact experiment.",
         ],
       },
       {
