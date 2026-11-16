@@ -22,12 +22,13 @@ export interface ResearchTrack {
 }
 
 export interface ResearchComparison {
+  csvHref: string;
   sectionId: string;
   sourceHref: string;
   groups: readonly {
     title: string;
     description: string;
-    rows: readonly { model: string; mae: string; mape: string; r2: string }[];
+    rows: readonly { model: string; rmse: string; mae: string; mape: string; r2: string }[];
   }[];
 }
 

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="1180" viewBox="0 0 520 1180" role="img" aria-labelledby="title desc">
+<title id="title">Track B · all five evaluated models</title>
+<desc id="desc">Four independent metric scales. Points show means; whiskers show plus or minus one population standard deviation across seeds 0, 1 and 2, not confidence intervals. 180 observations across 20 days.</desc>
+<metadata>{&quot;repository&quot;: &quot;OluwafisayoIbrahim/solar-power-prediction-python&quot;, &quot;commit&quot;: &quot;cfc51840ac5bce1454d9b924c6eec65935deb877&quot;, &quot;collection&quot;: {&quot;status&quot;: &quot;complete&quot;, &quot;training_data_sha256&quot;: &quot;b208f611a76bc08fe47a4b8a5776eb1f9ebf4a7ba8a7b3770c3e8559d88f8ea0&quot;, &quot;rows&quot;: 180, &quot;groups&quot;: 20, &quot;selected&quot;: &quot;S2&quot;, &quot;runs&quot;: {&quot;TensorFlow&quot;: &quot;results/tensorflow_s2&quot;, &quot;PyTorch&quot;: &quot;results/pytorch_selected&quot;}, &quot;comparison&quot;: &quot;results/comparison/comparison.csv&quot;, &quot;exports&quot;: {&quot;tensorflow&quot;: &quot;results/exports/tensorflow&quot;, &quot;pytorch&quot;: &quot;results/exports/pytorch&quot;, &quot;sklearn&quot;: &quot;results/exports/sklearn&quot;}, &quot;editorial_reference&quot;: &quot;manuscript/editorial_reference_superseded.zip&quot;, &quot;manuscript_pdf_status&quot;: &quot;content_and_visual_review_complete&quot;, &quot;original_source_csv_sha256&quot;: &quot;2c8266628be154f1da7e191ac1c8bfb6da8de15c4183bba8a24a49dcffcd8e1a&quot;, &quot;training_data_sha256_format&quot;: &quot;CSV bytes with LF line endings&quot;}, &quot;comparison&quot;: &quot;results/comparison/comparison.csv&quot;, &quot;track_b&quot;: [{&quot;track&quot;: &quot;B&quot;, &quot;model&quot;: &quot;Linear&quot;, &quot;source_framework&quot;: &quot;Both&quot;, &quot;MAE_mean&quot;: &quot;11.834841562459289&quot;, &quot;MAE_std&quot;: &quot;0.0&quot;, &quot;RMSE_mean&quot;: &quot;14.927617595304701&quot;, &quot;RMSE_std&quot;: &quot;1.7763568394002505e-15&quot;, &quot;MAPE_mean&quot;: &quot;4.723938148018123&quot;, &quot;MAPE_std&quot;: &quot;0.0&quot;, &quot;R2_mean&quot;: &quot;0.7023333268353508&quot;, &quot;R2_std&quot;: &quot;1.1102230246251565e-16&quot;, &quot;comparison_note&quot;: &quot;Protocol and reference data checks match; numerical differences remain possible.&quot;, &quot;display_name&quot;: &quot;Linear regression&quot;}, {&quot;track&quot;: &quot;B&quot;, &quot;model&quot;: &quot;Sklearn untuned&quot;, &quot;source_framework&quot;: &quot;Both&quot;, &quot;MAE_mean&quot;: &quot;14.044277336073398&quot;, &quot;MAE_std&quot;: &quot;0.2674477994624715&quot;, &quot;RMSE_mean&quot;: &quot;18.890498296383765&quot;, &quot;RMSE_std&quot;: &quot;1.2187841569910554&quot;, &quot;MAPE_mean&quot;: &quot;5.584449938698657&quot;, &quot;MAPE_std&quot;: &quot;0.13589165146689836&quot;, &quot;R2_mean&quot;: &quot;0.5213257229040776&quot;, &quot;R2_std&quot;: &quot;0.06252569364720992&quot;, &quot;comparison_note&quot;: &quot;Protocol and reference data checks match; numerical differences remain possible.&quot;, &quot;display_name&quot;: &quot;Untuned scikit-learn ANN&quot;}, {&quot;track&quot;: &quot;B&quot;, &quot;model&quot;: &quot;Sklearn tuned&quot;, &quot;source_framework&quot;: &quot;Both&quot;, &quot;MAE_mean&quot;: &quot;12.179177058109113&quot;, &quot;MAE_std&quot;: &quot;0.036561565589822105&quot;, &quot;RMSE_mean&quot;: &quot;15.633057683491659&quot;, &quot;RMSE_std&quot;: &quot;0.27776803052071275&quot;, &quot;MAPE_mean&quot;: &quot;4.865157962491673&quot;, &quot;MAPE_std&quot;: &quot;0.012297079057185863&quot;, &quot;R2_mean&quot;: &quot;0.6734316003748146&quot;, &quot;R2_std&quot;: &quot;0.011652346437453255&quot;, &quot;comparison_note&quot;: &quot;Protocol and reference data checks match; numerical differences remain possible.&quot;, &quot;display_name&quot;: &quot;Tuned scikit-learn ANN&quot;}, {&quot;track&quot;: &quot;B&quot;, &quot;model&quot;: &quot;TensorFlow selected&quot;, &quot;source_framework&quot;: &quot;TensorFlow&quot;, &quot;MAE_mean&quot;: &quot;11.95079849243164&quot;, &quot;MAE_std&quot;: &quot;0.31724666016497777&quot;, &quot;RMSE_mean&quot;: &quot;14.988718077212235&quot;, &quot;RMSE_std&quot;: &quot;0.3717642037417736&quot;, &quot;MAPE_mean&quot;: &quot;4.761492339141484&quot;, &quot;MAPE_std&quot;: &quot;0.10655563023317777&quot;, &quot;R2_mean&quot;: &quot;0.6997069485593438&quot;, &quot;R2_std&quot;: &quot;0.014817245963155755&quot;, &quot;comparison_note&quot;: &quot;Protocol and reference data checks match; numerical differences remain possible.&quot;, &quot;display_name&quot;: &quot;TensorFlow/Keras selected ANN&quot;}, {&quot;track&quot;: &quot;B&quot;, &quot;model&quot;: &quot;PyTorch selected&quot;, &quot;source_framework&quot;: &quot;PyTorch&quot;, &quot;MAE_mean&quot;: &quot;12.031620806658708&quot;, &quot;MAE_std&quot;: &quot;0.26198901883084896&quot;, &quot;RMSE_mean&quot;: &quot;15.02654382708131&quot;, &quot;RMSE_std&quot;: &quot;0.24554628915611046&quot;, &quot;MAPE_mean&quot;: &quot;4.80637032109948&quot;, &quot;MAPE_std&quot;: &quot;0.09662853847599855&quot;, &quot;R2_mean&quot;: &quot;0.6982944027479018&quot;, &quot;R2_std&quot;: &quot;0.009803638202877822&quot;, &quot;comparison_note&quot;: &quot;Protocol and reference data checks match; numerical differences remain possible.&quot;, &quot;display_name&quot;: &quot;PyTorch selected ANN&quot;}]}</metadata>
+<rect width="520" height="1180" fill="#fff"/>
+<g font-family="Arial, sans-serif" fill="#172338">
+<text x="18" y="28" font-size="23" font-weight="700">Weather inputs only · Track B</text>
+<text x="18" y="52" font-size="16" fill="#52677f">180 observations · 20 measurement days</text>
+<text x="18" y="85" font-size="20" font-weight="700">RMSE (W) · lower is better</text>
+<path d="M270.500,102 V296" stroke="#dee1df"/><text x="270.500" y="319" text-anchor="middle" font-size="16" fill="#52677f">14</text>
+<path d="M335.500,102 V296" stroke="#dee1df"/><text x="335.500" y="319" text-anchor="middle" font-size="16" fill="#52677f">16</text>
+<path d="M400.500,102 V296" stroke="#dee1df"/><text x="400.500" y="319" text-anchor="middle" font-size="16" fill="#52677f">18</text>
+<path d="M465.500,102 V296" stroke="#dee1df"/><text x="465.500" y="319" text-anchor="middle" font-size="16" fill="#52677f">20</text>
+<g><title>Linear regression: 14.928 ± 0.000</title>
+<text x="18" y="126" font-size="17">Linear regression</text>
+<path d="M300.6476,121 H300.6476 M300.6476,115 V127 M300.6476,115 V127" fill="none" stroke="#172338" stroke-width="2"/><circle cx="300.6476" cy="121" r="5.5" fill="#3b72cc" stroke="#172338" stroke-width="1"/></g>
+<g><title>Untuned scikit-learn ANN: 18.890 ± 1.219</title>
+<text x="18" y="156" font-size="17">Untuned scikit-learn</text>
+<text x="18" y="173" font-size="17">ANN</text>
+<path d="M389.8307,160 H469.0517 M389.8307,154 V166 M469.0517,154 V166" fill="none" stroke="#172338" stroke-width="2"/><circle cx="429.4412" cy="160" r="5.5" fill="#52677f" stroke="#172338" stroke-width="1"/></g>
+<g><title>Tuned scikit-learn ANN: 15.633 ± 0.278</title>
+<text x="18" y="195" font-size="17">Tuned scikit-learn</text>
+<text x="18" y="212" font-size="17">ANN</text>
+<path d="M314.5469,199 H332.6018 M314.5469,193 V205 M332.6018,193 V205" fill="none" stroke="#172338" stroke-width="2"/><circle cx="323.5744" cy="199" r="5.5" fill="#88a996" stroke="#172338" stroke-width="1"/></g>
+<g><title>TensorFlow/Keras selected ANN: 14.989 ± 0.372</title>
+<text x="18" y="234" font-size="17">TensorFlow/Keras</text>
+<text x="18" y="251" font-size="17">selected ANN</text>
+<path d="M290.5510,238 H314.7157 M290.5510,232 V244 M314.7157,232 V244" fill="none" stroke="#172338" stroke-width="2"/><circle cx="302.6333" cy="238" r="5.5" fill="#b6a17a" stroke="#172338" stroke-width="1"/></g>
+<g><title>PyTorch selected ANN: 15.027 ± 0.246</title>
+<text x="18" y="282" font-size="17">PyTorch selected ANN</text>
+<path d="M295.8824,277 H311.8429 M295.8824,271 V283 M311.8429,271 V283" fill="none" stroke="#172338" stroke-width="2"/><circle cx="303.8627" cy="277" r="5.5" fill="#837ba5" stroke="#172338" stroke-width="1"/></g>
+<text x="18" y="351" font-size="20" font-weight="700">MAE (W) · lower is better</text>
+<path d="M238.000,368 V562" stroke="#dee1df"/><text x="238.000" y="585" text-anchor="middle" font-size="16" fill="#52677f">11</text>
+<path d="M303.000,368 V562" stroke="#dee1df"/><text x="303.000" y="585" text-anchor="middle" font-size="16" fill="#52677f">12</text>
+<path d="M368.000,368 V562" stroke="#dee1df"/><text x="368.000" y="585" text-anchor="middle" font-size="16" fill="#52677f">13</text>
+<path d="M433.000,368 V562" stroke="#dee1df"/><text x="433.000" y="585" text-anchor="middle" font-size="16" fill="#52677f">14</text>
+<path d="M498.000,368 V562" stroke="#dee1df"/><text x="498.000" y="585" text-anchor="middle" font-size="16" fill="#52677f">15</text>
+<g><title>Linear regression: 11.835 ± 0.000</title>
+<text x="18" y="392" font-size="17">Linear regression</text>
+<path d="M292.2647,387 H292.2647 M292.2647,381 V393 M292.2647,381 V393" fill="none" stroke="#172338" stroke-width="2"/><circle cx="292.2647" cy="387" r="5.5" fill="#3b72cc" stroke="#172338" stroke-width="1"/></g>
+<g><title>Untuned scikit-learn ANN: 14.044 ± 0.267</title>
+<text x="18" y="422" font-size="17">Untuned scikit-learn</text>
+<text x="18" y="439" font-size="17">ANN</text>
+<path d="M418.4939,426 H453.2621 M418.4939,420 V432 M453.2621,420 V432" fill="none" stroke="#172338" stroke-width="2"/><circle cx="435.8780" cy="426" r="5.5" fill="#52677f" stroke="#172338" stroke-width="1"/></g>
+<g><title>Tuned scikit-learn ANN: 12.179 ± 0.037</title>
+<text x="18" y="461" font-size="17">Tuned scikit-learn</text>
+<text x="18" y="478" font-size="17">ANN</text>
+<path d="M312.2700,465 H317.0230 M312.2700,459 V471 M317.0230,459 V471" fill="none" stroke="#172338" stroke-width="2"/><circle cx="314.6465" cy="465" r="5.5" fill="#88a996" stroke="#172338" stroke-width="1"/></g>
+<g><title>TensorFlow/Keras selected ANN: 11.951 ± 0.317</title>
+<text x="18" y="500" font-size="17">TensorFlow/Keras</text>
+<text x="18" y="517" font-size="17">selected ANN</text>
+<path d="M279.1809,504 H320.4229 M279.1809,498 V510 M320.4229,498 V510" fill="none" stroke="#172338" stroke-width="2"/><circle cx="299.8019" cy="504" r="5.5" fill="#b6a17a" stroke="#172338" stroke-width="1"/></g>
+<g><title>PyTorch selected ANN: 12.032 ± 0.262</title>
+<text x="18" y="548" font-size="17">PyTorch selected ANN</text>
+<path d="M288.0261,543 H322.0846 M288.0261,537 V549 M322.0846,537 V549" fill="none" stroke="#172338" stroke-width="2"/><circle cx="305.0554" cy="543" r="5.5" fill="#837ba5" stroke="#172338" stroke-width="1"/></g>
+<text x="18" y="617" font-size="20" font-weight="700">R² · higher is better</text>
+<path d="M238.000,634 V828" stroke="#dee1df"/><text x="238.000" y="851" text-anchor="middle" font-size="16" fill="#52677f">0.4</text>
+<path d="M312.286,634 V828" stroke="#dee1df"/><text x="312.286" y="851" text-anchor="middle" font-size="16" fill="#52677f">0.5</text>
+<path d="M386.571,634 V828" stroke="#dee1df"/><text x="386.571" y="851" text-anchor="middle" font-size="16" fill="#52677f">0.6</text>
+<path d="M460.857,634 V828" stroke="#dee1df"/><text x="460.857" y="851" text-anchor="middle" font-size="16" fill="#52677f">0.7</text>
+<g><title>Linear regression: 0.702 ± 0.000</title>
+<text x="18" y="658" font-size="17">Linear regression</text>
+<path d="M462.5905,653 H462.5905 M462.5905,647 V659 M462.5905,647 V659" fill="none" stroke="#172338" stroke-width="2"/><circle cx="462.5905" cy="653" r="5.5" fill="#3b72cc" stroke="#172338" stroke-width="1"/></g>
+<g><title>Untuned scikit-learn ANN: 0.521 ± 0.063</title>
+<text x="18" y="688" font-size="17">Untuned scikit-learn</text>
+<text x="18" y="705" font-size="17">ANN</text>
+<path d="M281.6800,692 H374.5753 M281.6800,686 V698 M374.5753,686 V698" fill="none" stroke="#172338" stroke-width="2"/><circle cx="328.1277" cy="692" r="5.5" fill="#52677f" stroke="#172338" stroke-width="1"/></g>
+<g><title>Tuned scikit-learn ANN: 0.673 ± 0.012</title>
+<text x="18" y="727" font-size="17">Tuned scikit-learn</text>
+<text x="18" y="744" font-size="17">ANN</text>
+<path d="M432.4646,731 H449.7766 M432.4646,725 V737 M449.7766,725 V737" fill="none" stroke="#172338" stroke-width="2"/><circle cx="441.1206" cy="731" r="5.5" fill="#88a996" stroke="#172338" stroke-width="1"/></g>
+<g><title>TensorFlow/Keras selected ANN: 0.700 ± 0.015</title>
+<text x="18" y="766" font-size="17">TensorFlow/Keras</text>
+<text x="18" y="783" font-size="17">selected ANN</text>
+<path d="M449.6324,770 H471.6465 M449.6324,764 V776 M471.6465,764 V776" fill="none" stroke="#172338" stroke-width="2"/><circle cx="460.6394" cy="770" r="5.5" fill="#b6a17a" stroke="#172338" stroke-width="1"/></g>
+<g><title>PyTorch selected ANN: 0.698 ± 0.010</title>
+<text x="18" y="814" font-size="17">PyTorch selected ANN</text>
+<path d="M452.3074,809 H466.8728 M452.3074,803 V815 M466.8728,803 V815" fill="none" stroke="#172338" stroke-width="2"/><circle cx="459.5901" cy="809" r="5.5" fill="#837ba5" stroke="#172338" stroke-width="1"/></g>
+<text x="18" y="883" font-size="20" font-weight="700">MAPE (%) · lower is better</text>
+<path d="M255.333,900 V1094" stroke="#dee1df"/><text x="255.333" y="1117" text-anchor="middle" font-size="16" fill="#52677f">4.5</text>
+<path d="M342.000,900 V1094" stroke="#dee1df"/><text x="342.000" y="1117" text-anchor="middle" font-size="16" fill="#52677f">5</text>
+<path d="M428.667,900 V1094" stroke="#dee1df"/><text x="428.667" y="1117" text-anchor="middle" font-size="16" fill="#52677f">5.5</text>
+<g><title>Linear regression: 4.724 ± 0.000</title>
+<text x="18" y="924" font-size="17">Linear regression</text>
+<path d="M294.1493,919 H294.1493 M294.1493,913 V925 M294.1493,913 V925" fill="none" stroke="#172338" stroke-width="2"/><circle cx="294.1493" cy="919" r="5.5" fill="#3b72cc" stroke="#172338" stroke-width="1"/></g>
+<g><title>Untuned scikit-learn ANN: 5.584 ± 0.136</title>
+<text x="18" y="954" font-size="17">Untuned scikit-learn</text>
+<text x="18" y="971" font-size="17">ANN</text>
+<path d="M419.7501,958 H466.8592 M419.7501,952 V964 M466.8592,952 V964" fill="none" stroke="#172338" stroke-width="2"/><circle cx="443.3047" cy="958" r="5.5" fill="#52677f" stroke="#172338" stroke-width="1"/></g>
+<g><title>Tuned scikit-learn ANN: 4.865 ± 0.012</title>
+<text x="18" y="993" font-size="17">Tuned scikit-learn</text>
+<text x="18" y="1010" font-size="17">ANN</text>
+<path d="M316.4959,997 H320.7589 M316.4959,991 V1003 M320.7589,991 V1003" fill="none" stroke="#172338" stroke-width="2"/><circle cx="318.6274" cy="997" r="5.5" fill="#88a996" stroke="#172338" stroke-width="1"/></g>
+<g><title>TensorFlow/Keras selected ANN: 4.761 ± 0.107</title>
+<text x="18" y="1032" font-size="17">TensorFlow/Keras</text>
+<text x="18" y="1049" font-size="17">selected ANN</text>
+<path d="M282.1890,1036 H319.1283 M282.1890,1030 V1042 M319.1283,1030 V1042" fill="none" stroke="#172338" stroke-width="2"/><circle cx="300.6587" cy="1036" r="5.5" fill="#b6a17a" stroke="#172338" stroke-width="1"/></g>
+<g><title>PyTorch selected ANN: 4.806 ± 0.097</title>
+<text x="18" y="1080" font-size="17">PyTorch selected ANN</text>
+<path d="M291.6886,1075 H325.1865 M291.6886,1069 V1081 M325.1865,1069 V1081" fill="none" stroke="#172338" stroke-width="2"/><circle cx="308.4375" cy="1075" r="5.5" fill="#837ba5" stroke="#172338" stroke-width="1"/></g>
+<text x="18" y="1154" font-size="16" fill="#52677f">Mean ± population seed SD (0, 1, 2)</text>
+<text x="18" y="1175" font-size="16" fill="#52677f">Whiskers are not confidence intervals.</text>
+</g></svg>
