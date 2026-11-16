@@ -86,6 +86,54 @@ export const researchProjects: readonly ResearchProject[] = [
   "sourceHref": "https://github.com/OluwafisayoIbrahim/solar-power-prediction-python/blob/dev/results/comparisons/parity_s2/comparison.md",
   "groups": [
     {
+      "title": "Electrical inputs included (Track A)",
+      "description": "Irradiance, temperature, humidity, current and voltage. The current × voltage baseline requires no learned model.",
+      "rows": [
+        {
+          "model": "Linear regression",
+          "rmse": "1.235 ± 0.000",
+          "mae": "0.978 ± 0.000",
+          "r2": "0.998 ± 0.000",
+          "mape": "0.377 ± 0.000"
+        },
+        {
+          "model": "Electrical-product baseline, P = I × V",
+          "rmse": "1.254 ± 0.000",
+          "mae": "1.115 ± 0.000",
+          "r2": "0.998 ± 0.000",
+          "mape": "0.424 ± 0.000"
+        },
+        {
+          "model": "Untuned scikit-learn ANN",
+          "rmse": "3.580 ± 3.118",
+          "mae": "1.304 ± 0.538",
+          "r2": "0.970 ± 0.039",
+          "mape": "0.505 ± 0.214"
+        },
+        {
+          "model": "Tuned scikit-learn ANN",
+          "rmse": "1.393 ± 0.089",
+          "mae": "1.069 ± 0.060",
+          "r2": "0.997 ± 0.000",
+          "mape": "0.413 ± 0.026"
+        },
+        {
+          "model": "TensorFlow/Keras selected ANN",
+          "rmse": "1.863 ± 0.297",
+          "mae": "1.334 ± 0.159",
+          "r2": "0.995 ± 0.002",
+          "mape": "0.515 ± 0.059"
+        },
+        {
+          "model": "PyTorch selected ANN",
+          "rmse": "2.405 ± 0.145",
+          "mae": "1.624 ± 0.148",
+          "r2": "0.992 ± 0.001",
+          "mape": "0.622 ± 0.062"
+        }
+      ]
+    },
+    {
       "title": "Weather inputs only (Track B)",
       "description": "Irradiance, temperature, humidity and hour of day; current and voltage are excluded. These are contemporaneous power estimates, not future-time forecasts.",
       "rows": [
@@ -128,7 +176,7 @@ export const researchProjects: readonly ResearchProject[] = [
     }
   ]
 },
-    figure: {"src": "/images/research/solar-python-results.svg", "alt": "Track B comparison of linear regression, untuned and tuned scikit-learn ANNs, TensorFlow/Keras selected ANN and PyTorch selected ANN: RMSE, MAE, R² and MAPE, with mean ± one population seed standard deviation", "caption": "Weather inputs only (Track B) · 180 observations across 20 days. Mean ± one population seed standard deviation; not a confidence interval. Lower RMSE, MAE and MAPE and higher R² are better.", "aspectRatio": "520 / 1180"},
+    figure: {"src": "/images/research/solar-python-results.svg", "alt": "Manuscript Figure 5: horizontal mean MAE bars with one population seed standard deviation for six Track A models and five Track B models, on independent zero-based scales in watts", "caption": "Manuscript Figure 5 · matched S2 mean MAE (W) ± one population seed standard deviation. Track panels use independent scales; bars start at zero. Lower is better. 180 observations across 20 days; seed variation is not a confidence interval.", "aspectRatio": "436 / 498"},
     title: "Solar Power Prediction: Python Reimplementation",
     summary:
       "A Python reimplementation of my undergraduate research project on solar power prediction, extending the neural-network experiments across scikit-learn, TensorFlow and PyTorch, with an interactive Streamlit app.",
